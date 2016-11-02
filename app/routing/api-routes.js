@@ -1,34 +1,3 @@
-// app.get('/api/:survey?', function (req, res) {
-//   var chosen = req.params.characters;
-
-//   if (chosen) {
-//     console.log(chosen);
-
-//     for (var i = 0; i < characters.length; i++) {
-//       if (chosen === characters[i].routeName) {
-//         res.json(characters[i]);
-//         return;
-//       }
-//     }
-
-//     res.json(false);
-//   } else {
-//     res.json(characters);
-//   }
-// });
-
-
-// app.post('/api/new', function (req, res) {
-//   var newChoice = req.body;
-//   newhoice.routeName = newChoice.name.replace(/\s+/g, '').toLowerCase();
-
-//   console.log(newChoice);
-
-//   characters.push(newChoice);
-
-//   res.json(newChoice);
-// });
-// 
 var htmlRoutes = require('../routing/html-routes.js');
 var apiRoutes = require('../routing/api-routes.js');
 
