@@ -38,11 +38,6 @@ app.get('/api/:characters?', function (req, res) {
   }
 });
 
-// app.post('/add', function (req, res) {
-//   console.log("Adding data");
-//   console.log(req);
-// });
-
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
 });
