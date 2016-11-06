@@ -3,9 +3,16 @@
 
 <head>
     <title>||Find a friend||</title>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="container-fluid">
     <br>
     <div class="page-header">
         <h1>Questions:</h1>
@@ -29,19 +36,16 @@
             </div>
         </div>
         </div>
+    </div>
     </form>
     <br>
+<div class="container">
     <div class="form-group">
         <div id="q1">
             <label for="q1">I love adventure and exploring new places.</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -55,12 +59,7 @@
             <label for="q2">I love meeting new people.</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -74,12 +73,7 @@
             <label for="q3">Is the glass always half full?</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -93,12 +87,7 @@
             <label for="q4">I'm a fucking genius.</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -112,12 +101,7 @@
             <label for="q5">I'm more of a relaxed, laid-back type of person.</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -131,12 +115,7 @@
             <label for="q6">I'm always a leader.</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -150,12 +129,7 @@
             <label for="q7">I like to hear the honest truth, even if its painful.</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -169,12 +143,7 @@
             <label for="q8">One day I wanna take over the world.</label>
             <br>
             <select id="Select" class="form-control">
-                <option>10 <small>(strongly agree)</small></option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5</option>
+                <option>5<small> (strongly agree)</small></option>
                 <option>4</option>
                 <option>3</option>
                 <option>2</option>
@@ -182,34 +151,38 @@
             </select>
         </div>
     </div>
+</div>
     </style>
 <!--     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="button">Generate</button>
  -->
 
-
+<div class="container">
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Generate</button>
+<button type="button" class="btn btn-info btn-lg" id="btn" data-toggle="modal" data-target="#myModal">Generate</button>
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content" id="form-control">
       <div class="modal-header">
         <button type="btn" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Your Match:</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <p id="matchName"></p>
+        <p id="matchImg"></p>
+        <p id="resultsModal"></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-
+   </div>
   </div>
 </div>
+<br>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -217,3 +190,48 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+ $("#btn").on("click", function() {
+        // Create an object for the user's data
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+        };
+    }
+        // console.log("here")
+        //conditional to make sure no empty inputs go through
+        if ((newFriend.name == "") || (newFriend.photo == "") || (newFriend.scores[0] == "") || (newFriend.scores[1] == "") || (newFriend.scores[2] == "") || (newFriend.scores[3] == "") || (newFriend.scores[4] == "") || (newFriend.scores[5] == "") || (newFriend.scores[6] == "") || (newFriend.scores[7] == "") || (newFriend.scores[8] == "") {
+            alert("You did not complete the form");
+            return;
+        } else {
+        
+        // Grab the URL of the website
+        var currentURL = window.location.origin;
+        // AJAX post the data to the friends API. 
+        $.post(currentURL + "/api/friends", newFriend, function(data) {
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $("#matchName").text(data.name);
+            $("#matchImg").attr("src", data.photo);
+            // Show the modal with the best match 
+            $("#resultsModal").modal("toggle");
+            //clear inputs
+            $("#name").val("");
+            $("#photo").val("");
+            $("#q1").val("");
+            $("#q2").val("");
+            $("#q3").val("");
+            $("#q4").val("");
+            $("#q5").val("");
+            $("#q6").val("");
+            $("#q7").val("");
+            $("#q8").val("");
+        });
+}
+        }
+        return false;
+    });
+
+</script>
